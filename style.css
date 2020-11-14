@@ -25,7 +25,6 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-
 }
 
 .logo img {
@@ -50,15 +49,15 @@ nav {
     justify-content: space-around;
     align-items: center;
     margin-left: auto;
-    clip-path: circle(100px at 90% 10%);
-    -webkit-clip-path: circle(100px at 90% -15%);
+    clip-path: circle(100px at 80% 10%);
+    -webkit-clip-path: circle(100px at 80% -15%);
     transition: all 1s ease-out;
     pointer-events: none;
 }
 
 .nav-links.open {
-    clip-path: circle(1500px at 90% 10%);
-    -webkit-clip-path: circle(1500px at 90% -15%);
+    clip-path: circle(1500px at 80% 10%);
+    -webkit-clip-path: circle(1500px at 80% -15%);
     pointer-events: all;
 }
 
@@ -84,12 +83,11 @@ nav {
 }
 
 .sticky {
+    width: 100%;
     background-color: #fff;
     color: #000;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 8vh;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -121,7 +119,7 @@ nav {
 }
 
 #main p {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 #main img {
@@ -146,11 +144,10 @@ nav {
 }
 
 .skills h3 {
-    font-size: 20px;
-    padding: 10px;
+    font-size: 15px;
+    padding: 5px;
     text-align: center;
     color: #777;
-    font-weight: 10;
 }
 
 .boxes {
@@ -189,7 +186,7 @@ nav {
     animation: typewriter 3s;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 4px solid white;
+    border-right: 3px solid white;
     border-radius: 2px;
     font-family: 'Source Code Pro', monospace;
     width: 15.5ch;
@@ -220,6 +217,7 @@ nav {
 .about p {
     font-size: 20px;
     text-align: center;
+    max-width: 80%;
 }
 
 footer {
@@ -269,6 +267,14 @@ footer {
         width: 60%;
         height: 55%;
     }
+
+    #main p {
+        font-size: 40px;
+    }
+
+    .skills h3 {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -279,6 +285,10 @@ footer {
     #main img {
         width: 45%;
         height: 60%;
+    }
+
+    #main p {
+        font-size: 40px;
     }
 
     nav {
@@ -306,5 +316,9 @@ footer {
 
     .skills {
         min-height: 100vh;
+    }
+
+    .skills h3 {
+        font-size: 20px;
     }
 }
