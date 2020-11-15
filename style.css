@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+/* Start of General and Home page */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,11 +17,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+* a {
+    text-decoration: none;
+}
+
 nav {
     display: flex;
     height: 8vh;
     background-color: #000;
     position: relative;
+    transition: 0.5s;
 }
 
 .logo {
@@ -167,12 +174,17 @@ nav {
     align-items: center;
     justify-content: center;
     border-radius: 20px;
+    transition: 0.3s;
 }
 
 .box p {
     width: 50%;
     text-align: center;
     font-size: 20px;
+}
+
+.box-link {
+    color: black;
 }
 
 .box:hover {
@@ -228,6 +240,7 @@ footer {
     justify-content: center;
     text-align: center;
     align-items: center;
+    padding: 20px;
 }
 
 @keyframes typewriter {
@@ -262,7 +275,39 @@ footer {
     }
 }
 
+/* End of General and Home page */
+
+/* ------------------------------ */
+
+/* Start of skill page */
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding: 30px;
+}
+
+.skill img {
+    width: 100%;
+}
+
+.skill h1 {
+    font-size: 50px;
+}
+
+.skill p {
+    padding: 30px 0;
+    font-size: 23px;
+}
+
+/* End of skill page */
+
 @media only screen and (min-width: 768px) {
+
+/* Start of General and Home page */
+
     #main img {
         width: 60%;
         height: 55%;
@@ -275,16 +320,46 @@ footer {
     .skills h3 {
         font-size: 20px;
     }
+
+/* End of General and Home page */
+
+/* Start of skill page */
+
+    .skill h1 {
+        margin-right: auto;
+    }
+
+    .skill p {
+        padding: 40px;
+    }
+
+    .skill img {
+        object-fit: cover;
+        width: 550px;
+        margin-top: -10%;
+        margin-bottom: -50%;
+    }
+
+    .skill .js-img, .skill .front-img {
+        width: 450px;
+        margin-top: 10%;
+    }
+
+/* End of skill page */
+
 }
 
 @media only screen and (min-width: 1000px) {
+
+/* End of General and Home page */
+
     #main {
         flex-direction: row;
     }
 
     #main img {
         width: 45%;
-        height: 60%;
+        height: 75%;
     }
 
     #main p {
@@ -320,5 +395,43 @@ footer {
 
     .skills h3 {
         font-size: 20px;
+    }
+
+/* End of General and Home page */
+
+/* -------------------------------- */
+
+/* Start of skill page */
+
+    .skill {
+        padding: 120px 100px;
+    }
+
+    .skill h1 {
+        font-size: 80px;
+        margin-right: auto;
+    }
+
+    .skill img {
+        width: 500px;
+        margin-bottom: -50%;
+    }
+
+/* End of skill page */
+}
+
+@media only screen and (min-width: 1400px) {
+    .skill img{
+        width: 700px;
+        height: 700px;
+        margin-left: auto;
+    }    
+
+    .skill .js-img, .skill .front-img {
+        all: unset;
+        margin-left: auto;
+        width: 600px;
+        margin-top: 0;
+        margin-bottom: 10%;
     }
 }
